@@ -1,0 +1,13 @@
+#menu, #topbar
+{
+    background-color: #d4d4d4;
+}
+
+#topbar
+{
+    color: black;
+    font-size: 100pt;
+    position: relative;
+    text-align: center;
+    height: 20vh;
+}

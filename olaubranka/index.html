@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Ola Ubranka</title>
+
+        <meta charset="UTF-8"/>
+
+        <link rel="icon" href="icon.jpg"/>
+        <link rel="stylesheet" href="main.css"/>
+        <link rel="stylesheet" href="topbar/topbar.css"/>
+        <link rel="stylesheet" href="menu/menu.css"/>
+    </head>
+    <body>
+        <div id="menu">
+            <ul id="menuList">
+                <li><a href="#top" class="menuItem" onclick="menuButtonPressed();"><span class="menuItemText">Home</span></a></li>
+                <li><a href="#about" class="menuItem" onclick="menuButtonPressed();"><span class="menuItemText">About</span></a></li>
+                <li><a href="#kamil" class="menuItem" onclick="menuButtonPressed();"><span class="menuItemText">Czy Kamil to debil?</span></a></li>
+            </ul>
+        </div>
+        <div id="top" class="slide">
+            <div id="topbar">
+                <div class="menuButton" onclick="menuButtonPressed()">
+                    <div class="menuButtonBar1"></div>
+                    <div class="menuButtonBar2"></div>
+                    <div class="menuButtonBar3"></div>
+                </div>
+                <span id="brand">Ubranka</span>
+            </div>
+            <div id="video">
+                <video autoplay muted loop>
+                    <source src="krucigang.mp4" type="video/mp4"/>
+                </video>
+            </div>
+        </div>
+        <div id="about" class="slide">
+            Lorem ipsum
+        </div>
+        <div id="kamil" class="slide">
+            <h1>Tak</h1>
+        </div>
+        <script src="menu/menu.js"></script>
+    </body>
+</html>

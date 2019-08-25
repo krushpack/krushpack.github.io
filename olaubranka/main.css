@@ -1,0 +1,35 @@
+body
+{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+#brand
+{
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+.slide
+{
+    flex-basis: 100vh;
+}
+
+video
+{
+    display: block;
+    height: 80vh;
+    object-fit: fill;
+    width: 100%;
+}
