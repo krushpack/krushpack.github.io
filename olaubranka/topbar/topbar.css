@@ -1,10 +1,50 @@
-#menu, #topbar
+.active
 {
-    background-color: #d4d4d4;
+    position: fixed !important;
+}
+
+.active #menuButtonBar1
+{
+    background-color: white;
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.active #menuButtonBar2
+{
+    background-color: white;
+    opacity: 0;
+}
+
+.active #menuButtonBar3
+{
+    background-color: white;
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#menuButton
+{
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 10vh;
+    left: 20px;
+    transform: translateY(-50%);
+    transition: 0.4s;
+    z-index: 2;
+}
+
+#menuButtonBar1, #menuButtonBar2, #menuButtonBar3
+{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
 }
 
 #topbar
 {
+    background-color: #d4d4d4;
     color: black;
     font-size: 100pt;
     position: relative;

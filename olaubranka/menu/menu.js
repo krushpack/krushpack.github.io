@@ -1,4 +1,4 @@
-var menuButton = document.querySelector(".menuButton");
+var menuButton = document.querySelector("#menuButton");
 var menu = document.querySelector("#menu");
 
 function menuButtonPressed()
