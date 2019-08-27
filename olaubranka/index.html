@@ -6,10 +6,8 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <link rel="icon" href="icon.jpg"/>
+        <link rel="icon" href="img/icon.jpg"/>
         <link rel="stylesheet" href="main.css"/>
-        <link rel="stylesheet" href="topbar/topbar.css"/>
-        <link rel="stylesheet" href="menu/menu.css"/>
     </head>
     <body>
         <div id="menu">
@@ -33,22 +31,31 @@
             </div>
             <div id="video">
                 <video autoplay muted loop>
-                    <source src="krucigang.mp4" type="video/mp4"/>
+                    <source src="img/krucigang.mp4" type="video/mp4"/>
                 </video>
             </div>
         </div>
         <div id="divider1" class="divider"> 
-            
+            <span class="dividerText">O czymś tam</span>
         </div>
         <div id="about" class="slide">
             Lorem ipsum
         </div>
         <div id="divider2" class="divider"> 
-            
+            <span class="dividerText">Czy kamil to debil?</span>
         </div>
         <div id="kamil" class="slide">
             <h1>Tak</h1>
         </div>
+        <!--slide template-->
+        <template id="slideTemplate">
+            <div class="divider">
+                <span class="dividerText"><!--Title here--></span>
+            </div>
+            <div class="slide">
+                <!--Content here-->
+            </div>
+        </template>
         <script src="menu/menu.js"></script>
     </body>
 </html>

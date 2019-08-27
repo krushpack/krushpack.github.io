@@ -1,54 +1,170 @@
-body
-{
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+#menu {
+  background-color: #d4d4d8;
+  color: black;
+  height: 100%;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 0;
+  z-index: 1;
 }
 
-#brand, #menuBrand
-{
-    display: inline-block;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    
+#menuHeader {
+  color: #d4d4d8;
+  background-color: black;
+  font-size: 20pt;
+  height: 20vh;
+  text-align: center;
 }
 
-.divider
-{
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20vh;
+.menuItem {
+  color: inherit;
+  display: block;
+  font-size: 20pt;
+  height: 80px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-#divider1
-{
-    background-image: url("divider1.jpg");
+.menuItem:hover {
+  background-color: black;
+  color: #d4d4d8;
 }
 
-#divider2
-{
-    background-image: url("divider2.jpg");
+.menuItemText {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  white-space: nowrap;
 }
 
-html
-{
-    scroll-behavior: smooth;
+#menuList {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
-.slide
-{
-    flex-basis: 100vh;
+.active {
+  position: fixed !important;
 }
 
-video
-{
-    display: block;
-    height: 80vh;
-    object-fit: cover;
-    width: 100%;
+.active #menuButtonBar1, .active #menuButtonBar2, .active #menuButtonBar3 {
+  background-color: #d4d4d8;
+}
+
+.active #menuButtonBar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+          transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.active #menuButtonBar2 {
+  opacity: 0;
+}
+
+.active #menuButtonBar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+          transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#brand {
+  font-size: 20vh;
+}
+
+#menuButton {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 10vh;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+#menuButtonBar1, #menuButtonBar2, #menuButtonBar3 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#topbar {
+  background-color: #d4d4d8;
+  color: black;
+  position: relative;
+  text-align: center;
+  height: 20vh;
+}
+
+body {
+  background-color: black;
+  color: #d4d4d8;
+  margin: 0;
+}
+
+#brand, #menuBrand {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.divider {
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20vh;
+  text-align: center;
+}
+
+.divider .dividerText {
+  background-color: white;
+  color: black;
+  display: inline-block;
+  font-size: 4vw;
+  font-weight: bold;
+  mix-blend-mode: screen;
+  padding: 10px;
+  position: relative;
+  text-transform: uppercase;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#divider1 {
+  background-image: url("img/divider1.jpg");
+}
+
+#divider2 {
+  background-image: url("img/divider2.jpg");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.slide {
+  height: 100vh;
+}
+
+video {
+  display: block;
+  height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
