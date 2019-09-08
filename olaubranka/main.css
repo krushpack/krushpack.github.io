@@ -168,3 +168,20 @@ video {
      object-fit: cover;
   width: 100%;
 }
+
+#videoBrand {
+  background-color: white;
+  color: black;
+  display: inline-block;
+  font-size: 20vh;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#top {
+  text-align: center;
+}
