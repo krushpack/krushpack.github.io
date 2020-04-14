@@ -1,0 +1,29 @@
+.slideHeader
+{
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+    text-align: center;
+
+    .slideHeaderText
+    {
+        background-color: $primary-color;
+        color: $secondary-color;
+        display: inline-block;
+        font-size: 4vw;
+        font-weight: bold;
+        mix-blend-mode: screen;
+        padding: 10px;
+        position: relative;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.slide 
+{
+    height: 80vh;
+}

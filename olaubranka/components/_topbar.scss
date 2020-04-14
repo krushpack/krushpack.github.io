@@ -1,0 +1,24 @@
+@mixin brand-style
+{
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@import 'menu';
+
+#topbar
+{
+    background-color: $primary-color;
+    color: $secondary-color;
+    text-align: center;
+    height: 20vh;
+}
+
+#brand
+{
+    font-size: 20vh;
+    @include brand-style;
+}
+

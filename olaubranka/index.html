@@ -2,60 +2,55 @@
 <html lang="pl">
     <head>
         <title>Ola Ubranka</title>
-
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
         <link rel="icon" href="img/icon.jpg"/>
         <link rel="stylesheet" href="main.css"/>
     </head>
     <body>
-        <div id="menu">
-            <div id="menuHeader">
-                <span id="menuBrand">Meniu</span>
+        <div class="slideHeader">
+            <div id="menuButton" onclick="toggleMenu()">
+                <div id="menuButtonBar1"></div>
+                <div id="menuButtonBar2"></div>
+                <div id="menuButtonBar3"></div>
             </div>
-            <ul id="menuList">
-                <li><a href="#top" class="menuItem" onclick="menuButtonPressed();"><span class="menuItemText">Home</span></a></li>
-                <li><a href="#about" class="menuItem" onclick="menuButtonPressed();"><span class="menuItemText">About</span></a></li>
-                <li><a href="#kamil" class="menuItem" onclick="menuButtonPressed();"><span class="menuItemText">Czy Kamil to debil?</span></a></li>
-            </ul>
-        </div>
-        <div id="top" class="slide">
-            <div id="topbar">
-                <div id="menuButton" onclick="menuButtonPressed()">
-                    <div id="menuButtonBar1"></div>
-                    <div id="menuButtonBar2"></div>
-                    <div id="menuButtonBar3"></div>
+            <div id="menu">
+                <div id="menuHeader">
+                    <span id="menuBrand">Meniu</span>
                 </div>
+                <ul id="menuList">
+                    <li><a href="#topbar" class="menuItem" onclick="toggleMenu();"><span class="menuItemText">Home</span></a></li>
+                    <li><a href="#about" class="menuItem" onclick="toggleMenu();"><span class="menuItemText">About</span></a></li>
+                    <li><a href="#kamil" class="menuItem" onclick="toggleMenu();"><span class="menuItemText">Czy Kamil to debil?</span></a></li>
+                </ul>
+            </div>
+            <div id="topbar">
                 <span id="brand">Ubranka</span>
             </div>
+        </div>
+        <div class="slide">
             <div id="video">
                 <video autoplay muted loop>
                     <source src="img/krucigang.mp4" type="video/mp4"/>
                 </video>
             </div>
         </div>
-        <div id="divider1" class="divider"> 
-            <span class="dividerText">O czymś tam</span>
-        </div>
-        <div id="about" class="slide">
-            Lorem ipsum
-        </div>
-        <div id="divider2" class="divider"> 
-            <span class="dividerText">Czy kamil to debil?</span>
-        </div>
-        <div id="kamil" class="slide">
-            <h1>Tak</h1>
-        </div>
-        <!--slide template-->
+
+        <!--Slide template-->
         <template id="slideTemplate">
-            <div class="divider">
-                <span class="dividerText"><!--Title here--></span>
+            <div class="slideHeader">
+                <span class="slideHeaderText"><!--Title here--></span>
             </div>
             <div class="slide">
                 <!--Content here-->
             </div>
         </template>
-        <script src="menu/menu.js"></script>
+        <script src="components/menu.js"></script>
+        <script src="components/topbar.js"></script>
+        <script src="components/slide.js"></script>
+        <script>
+            CreateSlide("about", "O czymś tam", "img/divider1.jpg", "Lorem ipsum");
+            CreateSlide("kamil", "Czy kamil jest debilem?", "img/divider2.jpg", "<h1>Tak</h1>");
+        </script>
     </body>
 </html>

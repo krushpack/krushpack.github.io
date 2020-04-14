@@ -1,0 +1,38 @@
+$primary-color: #d4d4d8;
+$secondary-color: black;
+
+@import 'components/topbar';
+@import 'components/slide';
+
+body
+{
+  background-color: $secondary-color;
+  color: $primary-color;
+  margin: 0;
+}
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+video 
+{
+  display: block;
+  height: 80vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+#videoBrand
+{
+  background-color: white;
+  color: $secondary-color;
+  display: inline-block;
+  font-size: 20vh;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+}

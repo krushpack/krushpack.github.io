@@ -1,0 +1,105 @@
+#menu
+{
+  background-color: $primary-color;
+  color: $secondary-color;
+  height: 100%;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  transition: 0.4s;
+  width: 0;
+  z-index: 1;
+}
+  
+#menuHeader
+{
+  color: $primary-color;
+  background-color: $secondary-color;
+  font-size: 20pt;
+  height: 20vh;
+  text-align: center;
+}
+
+.menuItem
+{
+  color: inherit;
+  display: block;
+  font-size: 20pt;
+  height: 80px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.4s;
+
+  &:hover
+  {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+
+  .menuItemText
+  {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+  }
+}
+
+
+
+#menuList
+{
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.active
+{
+  position: fixed !important;
+
+  #menuButtonBar1, #menuButtonBar2, #menuButtonBar3
+  {
+    background-color: $primary-color;
+  }
+
+  #menuButtonBar1
+  {
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  #menuButtonBar2
+  {
+    opacity: 0;
+  }
+  #menuButtonBar3
+  {
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
+
+#menuBrand
+{
+  @include brand-style;
+}
+
+#menuButton
+{
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 10vh;
+  left: 20px;
+  transform: translateY(-50%);
+  //transition: 0.4s;
+  z-index: 2;
+}
+
+#menuButtonBar1, #menuButtonBar2, #menuButtonBar3
+{
+  width: 35px;
+  height: 5px;
+  background-color: $secondary-color;
+  margin: 6px 0;
+  transition: 0.4s;
+}
